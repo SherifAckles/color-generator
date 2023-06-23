@@ -12,6 +12,7 @@ function App() {
     e.preventDefault();
     try {
       let colors = new Values(color).all(10);
+      setList(colors);
     } catch (error) {
       setErr(true);
     }
@@ -34,13 +35,15 @@ function App() {
           </button>
         </form>
       </section>
-      <section className="color">
-        {err && (
+      <section className="colors">
+        {list.map((color, i) => {
+          return <SingleColor key={i} {...color} i={i} />;
+        })}
+        {/* {err && (
           <p className="error-message">
             Invalid color format. Please provide a valid color.
           </p>
-        )}
-        <h4>list goes here</h4>
+        )} */}
       </section>
     </>
   );

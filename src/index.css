@@ -183,7 +183,7 @@ input.error {
   border: 2px solid var(--clr-red-dark);
 }
 .error-message {
-  color: red;
+  color:var(--clr-red-dark);
 }
 .colors {
   min-height: calc(100vh - 100px);
