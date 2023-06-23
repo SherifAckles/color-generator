@@ -9,15 +9,15 @@ const SingleColor = ({ rgb, weight, i, hex }) => {
   // CLEANING THE COPIED TO Clipboard TEXT AFTER 3 SEC
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setAlert(false)
-    }, 3000)
-    return ()=> clearTimeout(timeOut)
-  },[alert])
+      setAlert(false);
+    }, 3000);
+    return () => clearTimeout(timeOut);
+  }, [alert]);
 
   // CONVERTING THE ARRAY RGB TO A STRING
   // eslint-disable-next-line react/prop-types
   const bcg = rgb.join(",");
-  console.log(bcg);
+
   return (
     <article
       className={`color ${i > 10 && "color-light"}`}
