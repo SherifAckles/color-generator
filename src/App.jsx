@@ -37,13 +37,13 @@ function App() {
       </section>
       <section className="colors">
         {list.map((color, i) => {
-          return <SingleColor key={i} {...color} i={i} />;
+          return <SingleColor key={i} {...color} i={i} hex={color.hex} />;
         })}
-        {/* {err && (
+        {err && (
           <p className="error-message">
             Invalid color format. Please provide a valid color.
           </p>
-        )} */}
+        )}
       </section>
     </>
   );
